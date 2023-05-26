@@ -1,0 +1,13 @@
+1. https://github.com/xmrig/xmrig-deps
+2. Move xmrig-deps to C:/xmrig-deps
+
+MSYS2:
+	1. pacman -Syu
+	2. restart MSYS2
+	3. pacman -S git base-devel cmake mingw-w64-i686-gcc mingw-w64-i686-cmake mingw-w64-i686-hwloc 
+	4. git clone https://github.com/xmrig/xmrig.git
+	5. cd xmrig
+	6. mkdir build && cd build
+	7. cmake .. -G "Unix Makefiles" -DXMRIG_DEPS=c:/xmrig-deps/gcc/x86
+	8. make -j$(nproc)
+	9. Enjoy! :)
